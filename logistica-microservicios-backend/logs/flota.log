@@ -1,0 +1,870 @@
+2025-11-21 00:26:28 [main] INFO  ar.backend.flota.FlotaApplication - Starting FlotaApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 00:26:28 [main] INFO  ar.backend.flota.FlotaApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 00:26:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 00:26:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 593 ms. Found 2 JPA repository interfaces.
+2025-11-21 00:26:36 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d328444a-701c-36de-81a5-93674dc1bba3
+2025-11-21 00:26:37 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:26:37 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:26:37 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:26:37 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:26:37 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:26:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-11-21 00:26:39 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 00:26:39 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-11-21 00:26:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 00:26:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 11470 ms
+2025-11-21 00:26:41 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 00:26:41 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 00:26:41 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 00:26:42 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 00:26:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 00:26:42 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@19f1be04
+2025-11-21 00:26:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 00:26:42 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-21 00:26:44 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 00:26:44 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 00:26:46 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21 00:26:49 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 00:26:49 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 00:26:49 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 00:26:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 00:26:49 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:26:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:26:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:26:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:26:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:26:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:26:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 00:26:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:26:50 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:26:50 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 00:26:50 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 00:26:50 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763684810881 with initial instances count: 0
+2025-11-21 00:26:50 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application FLOTA with eureka with status UP
+2025-11-21 00:26:50 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763684810893, current=UP, previous=STARTING]
+2025-11-21 00:26:50 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 00:26:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-11-21 00:26:50 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2025-11-21 00:26:50 [main] INFO  ar.backend.flota.FlotaApplication - Started FlotaApplication in 25.106 seconds (process running for 27.931)
+2025-11-21 00:26:50 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [INICIO] El servicio de Flota se ha iniciado correctamente.
+2025-11-21 00:26:50 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [MONITOREO] Esperando peticiones en el puerto 8082...
+2025-11-21 00:26:51 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration status: 204
+2025-11-21 00:27:06 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application FLOTA with eureka with status DOWN
+2025-11-21 00:27:06 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763684826700, current=DOWN, previous=UP]
+2025-11-21 00:27:06 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 00:27:06 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration status: 204
+2025-11-21 00:27:06 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 00:27:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-21 00:27:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-21 00:27:06 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-21 00:27:48 [main] INFO  ar.backend.flota.FlotaApplication - Starting FlotaApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 00:27:48 [main] INFO  ar.backend.flota.FlotaApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 00:27:54 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 00:27:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 650 ms. Found 2 JPA repository interfaces.
+2025-11-21 00:27:56 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d328444a-701c-36de-81a5-93674dc1bba3
+2025-11-21 00:27:58 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:27:58 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:27:58 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:27:58 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:27:58 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:28:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-11-21 00:28:00 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 00:28:00 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-11-21 00:28:01 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 00:28:01 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 12767 ms
+2025-11-21 00:28:02 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 00:28:03 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 00:28:03 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 00:28:04 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 00:28:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 00:28:05 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75f65d54
+2025-11-21 00:28:05 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 00:28:05 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-21 00:28:07 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 00:28:07 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 00:28:09 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21 00:28:12 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 00:28:12 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 00:28:12 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 00:28:12 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 00:28:12 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:28:13 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:28:13 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:28:13 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:28:13 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:28:13 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:28:13 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 00:28:13 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:28:14 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:28:14 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 00:28:14 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 00:28:14 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763684894097 with initial instances count: 0
+2025-11-21 00:28:14 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application FLOTA with eureka with status UP
+2025-11-21 00:28:14 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763684894113, current=UP, previous=STARTING]
+2025-11-21 00:28:14 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 00:28:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-11-21 00:28:14 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2025-11-21 00:28:14 [main] INFO  ar.backend.flota.FlotaApplication - Started FlotaApplication in 29.929 seconds (process running for 32.983)
+2025-11-21 00:28:14 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [INICIO] El servicio de Flota se ha iniciado correctamente.
+2025-11-21 00:28:14 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [MONITOREO] Esperando peticiones en el puerto 8082...
+2025-11-21 00:28:14 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration status: 204
+2025-11-21 00:28:23 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21 00:28:23 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-21 00:28:23 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-11-21 00:28:24 [http-nio-8082-exec-8] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 661 ms
+2025-11-21 00:28:44 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:28:44 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:28:44 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:28:44 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:28:44 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:28:44 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-21 00:28:44 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:28:44 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:29:27 [http-nio-8082-exec-5] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Solicitud de alta para Patente: ABC-123
+2025-11-21 00:29:27 [http-nio-8082-exec-5] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Procesando alta de patente: ABC-123
+2025-11-21 00:29:27 [http-nio-8082-exec-5] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Guardado exitoso en base de datos.
+2025-11-21 00:29:27 [http-nio-8082-exec-5] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Camión creado exitosamente.
+2025-11-21 00:29:27 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Solicitud de alta para Patente: ABC-124
+2025-11-21 00:29:27 [http-nio-8082-exec-6] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Procesando alta de patente: ABC-124
+2025-11-21 00:29:27 [http-nio-8082-exec-6] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Guardado exitoso en base de datos.
+2025-11-21 00:29:27 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Camión creado exitosamente.
+2025-11-21 00:29:27 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Procesando registro. Telefono: 3511234567
+2025-11-21 00:29:28 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Usuario nuevo. Guardando en BD...
+2025-11-21 00:29:28 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Chofer procesado correctamente. ID: 1
+2025-11-21 00:29:28 [http-nio-8082-exec-7] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Procesando registro. Telefono: 3511234568
+2025-11-21 00:29:28 [http-nio-8082-exec-7] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Usuario nuevo. Guardando en BD...
+2025-11-21 00:29:28 [http-nio-8082-exec-7] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Chofer procesado correctamente. ID: 2
+2025-11-21 00:29:28 [http-nio-8082-exec-8] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Buscando camiones. Requerido -> Volumen: 10.0, Peso: 10.0
+2025-11-21 00:29:28 [http-nio-8082-exec-8] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Buscando camiones con CapacidadVolumen >= 10.0 y CapacidadPeso >= 10.0
+2025-11-21 00:29:28 [http-nio-8082-exec-8] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Se encontraron 2 vehículos aptos.
+2025-11-21 00:29:28 [http-nio-8082-exec-8] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Encontrados: 2 camiones disponibles.
+2025-11-21 00:29:30 [http-nio-8082-exec-1] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Buscando camiones. Requerido -> Volumen: 10.0, Peso: 10.0
+2025-11-21 00:29:30 [http-nio-8082-exec-1] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Buscando camiones con CapacidadVolumen >= 10.0 y CapacidadPeso >= 10.0
+2025-11-21 00:29:30 [http-nio-8082-exec-1] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Se encontraron 2 vehículos aptos.
+2025-11-21 00:29:30 [http-nio-8082-exec-1] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Encontrados: 2 camiones disponibles.
+2025-11-21 00:29:30 [http-nio-8082-exec-10] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-123
+2025-11-21 00:29:30 [http-nio-8082-exec-9] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-123 -> Nuevo Estado: NO_DISPONIBLE
+2025-11-21 00:29:31 [http-nio-8082-exec-9] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-123 a estado NO_DISPONIBLE
+2025-11-21 00:29:31 [http-nio-8082-exec-2] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-124
+2025-11-21 00:29:31 [http-nio-8082-exec-3] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-124 -> Nuevo Estado: NO_DISPONIBLE
+2025-11-21 00:29:31 [http-nio-8082-exec-3] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-124 a estado NO_DISPONIBLE
+2025-11-21 00:29:31 [http-nio-8082-exec-6] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] Buscando ChoferID: 1
+2025-11-21 00:29:31 [http-nio-8082-exec-6] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] TramoID 1 agregado a la lista del chofer.
+2025-11-21 00:29:31 [http-nio-8082-exec-7] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] Buscando ChoferID: 2
+2025-11-21 00:29:31 [http-nio-8082-exec-7] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] TramoID 2 agregado a la lista del chofer.
+2025-11-21 00:29:31 [http-nio-8082-exec-8] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CONSULTA_TRAMOS] Verificando asignaciones para ChoferID: 1
+2025-11-21 00:29:31 [http-nio-8082-exec-8] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CLIENT_LOGISTICA] Solicitando detalles de 1 tramos al microservicio Logistica...
+2025-11-21 00:29:33 [http-nio-8082-exec-1] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-123 -> Nuevo Estado: DISPONIBLE
+2025-11-21 00:29:33 [http-nio-8082-exec-1] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-123 a estado DISPONIBLE
+2025-11-21 00:29:33 [http-nio-8082-exec-10] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Removiendo TramoID: 1 de ChoferID: 1
+2025-11-21 00:29:33 [http-nio-8082-exec-10] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Eliminación exitosa.
+2025-11-21 00:29:34 [http-nio-8082-exec-9] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-123
+2025-11-21 00:29:34 [http-nio-8082-exec-2] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-124
+2025-11-21 00:29:34 [http-nio-8082-exec-3] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-124 -> Nuevo Estado: DISPONIBLE
+2025-11-21 00:29:34 [http-nio-8082-exec-3] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-124 a estado DISPONIBLE
+2025-11-21 00:29:34 [http-nio-8082-exec-5] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Removiendo TramoID: 2 de ChoferID: 2
+2025-11-21 00:29:34 [http-nio-8082-exec-5] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Eliminación exitosa.
+2025-11-21 00:33:12 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:36:55 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application FLOTA with eureka with status DOWN
+2025-11-21 00:36:55 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763685415236, current=DOWN, previous=UP]
+2025-11-21 00:36:55 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 00:36:55 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration status: 204
+2025-11-21 00:37:38 [main] INFO  ar.backend.flota.FlotaApplication - Starting FlotaApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 00:37:38 [main] INFO  ar.backend.flota.FlotaApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 00:37:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 00:37:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 671 ms. Found 2 JPA repository interfaces.
+2025-11-21 00:37:46 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d328444a-701c-36de-81a5-93674dc1bba3
+2025-11-21 00:37:48 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:37:48 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:37:48 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:37:48 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:37:48 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:37:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-11-21 00:37:50 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 00:37:50 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-11-21 00:37:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 00:37:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 11954 ms
+2025-11-21 00:37:52 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 00:37:52 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 00:37:52 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 00:37:53 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 00:37:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 00:37:54 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@71d0b8a4
+2025-11-21 00:37:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 00:37:54 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-21 00:37:56 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 00:37:56 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 00:37:57 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21 00:38:01 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 00:38:01 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 00:38:01 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 00:38:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 00:38:01 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:38:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:38:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:38:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:38:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:38:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:38:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 00:38:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:38:03 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:38:03 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 00:38:03 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 00:38:03 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763685483020 with initial instances count: 1
+2025-11-21 00:38:03 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application FLOTA with eureka with status UP
+2025-11-21 00:38:03 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763685483036, current=UP, previous=STARTING]
+2025-11-21 00:38:03 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 00:38:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-11-21 00:38:03 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2025-11-21 00:38:03 [main] INFO  ar.backend.flota.FlotaApplication - Started FlotaApplication in 27.418 seconds (process running for 31.201)
+2025-11-21 00:38:03 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [INICIO] El servicio de Flota se ha iniciado correctamente.
+2025-11-21 00:38:03 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [MONITOREO] Esperando peticiones en el puerto 8082...
+2025-11-21 00:38:03 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration status: 204
+2025-11-21 00:43:01 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:44:30 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21 00:44:30 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-21 00:44:30 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2025-11-21 00:44:30 [http-nio-8082-exec-1] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Solicitud de alta para Patente: ABC-123
+2025-11-21 00:44:30 [http-nio-8082-exec-1] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Procesando alta de patente: ABC-123
+2025-11-21 00:44:30 [http-nio-8082-exec-1] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Guardado exitoso en base de datos.
+2025-11-21 00:44:30 [http-nio-8082-exec-1] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Camión creado exitosamente.
+2025-11-21 00:44:31 [http-nio-8082-exec-2] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Solicitud de alta para Patente: ABC-124
+2025-11-21 00:44:31 [http-nio-8082-exec-2] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Procesando alta de patente: ABC-124
+2025-11-21 00:44:31 [http-nio-8082-exec-2] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Guardado exitoso en base de datos.
+2025-11-21 00:44:31 [http-nio-8082-exec-2] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Camión creado exitosamente.
+2025-11-21 00:44:31 [http-nio-8082-exec-3] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Procesando registro. Telefono: 3511234567
+2025-11-21 00:44:31 [http-nio-8082-exec-3] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Chofer procesado correctamente. ID: 1
+2025-11-21 00:44:31 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Procesando registro. Telefono: 3511234568
+2025-11-21 00:44:31 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Chofer procesado correctamente. ID: 2
+2025-11-21 00:44:31 [http-nio-8082-exec-5] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Buscando camiones. Requerido -> Volumen: 10.0, Peso: 10.0
+2025-11-21 00:44:31 [http-nio-8082-exec-5] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Buscando camiones con CapacidadVolumen >= 10.0 y CapacidadPeso >= 10.0
+2025-11-21 00:44:31 [http-nio-8082-exec-5] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Se encontraron 2 vehículos aptos.
+2025-11-21 00:44:31 [http-nio-8082-exec-5] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Encontrados: 2 camiones disponibles.
+2025-11-21 00:44:33 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Buscando camiones. Requerido -> Volumen: 10.0, Peso: 10.0
+2025-11-21 00:44:33 [http-nio-8082-exec-6] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Buscando camiones con CapacidadVolumen >= 10.0 y CapacidadPeso >= 10.0
+2025-11-21 00:44:33 [http-nio-8082-exec-6] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Se encontraron 2 vehículos aptos.
+2025-11-21 00:44:33 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Encontrados: 2 camiones disponibles.
+2025-11-21 00:44:34 [http-nio-8082-exec-7] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-123
+2025-11-21 00:44:34 [http-nio-8082-exec-8] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-123 -> Nuevo Estado: NO_DISPONIBLE
+2025-11-21 00:44:34 [http-nio-8082-exec-8] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-123 a estado NO_DISPONIBLE
+2025-11-21 00:44:34 [http-nio-8082-exec-9] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-124
+2025-11-21 00:44:34 [http-nio-8082-exec-10] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-124 -> Nuevo Estado: NO_DISPONIBLE
+2025-11-21 00:44:34 [http-nio-8082-exec-10] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-124 a estado NO_DISPONIBLE
+2025-11-21 00:44:34 [http-nio-8082-exec-2] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] Buscando ChoferID: 1
+2025-11-21 00:44:34 [http-nio-8082-exec-2] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] TramoID 1 agregado a la lista del chofer.
+2025-11-21 00:44:35 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] Buscando ChoferID: 2
+2025-11-21 00:44:35 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] TramoID 2 agregado a la lista del chofer.
+2025-11-21 00:44:35 [http-nio-8082-exec-5] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CONSULTA_TRAMOS] Verificando asignaciones para ChoferID: 1
+2025-11-21 00:44:35 [http-nio-8082-exec-5] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CLIENT_LOGISTICA] Solicitando detalles de 1 tramos al microservicio Logistica...
+2025-11-21 00:44:37 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-123
+2025-11-21 00:44:37 [http-nio-8082-exec-7] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-124
+2025-11-21 00:44:37 [http-nio-8082-exec-8] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-124 -> Nuevo Estado: DISPONIBLE
+2025-11-21 00:44:37 [http-nio-8082-exec-8] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-124 a estado DISPONIBLE
+2025-11-21 00:44:37 [http-nio-8082-exec-9] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Removiendo TramoID: 2 de ChoferID: 2
+2025-11-21 00:44:37 [http-nio-8082-exec-9] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Eliminación exitosa.
+2025-11-21 00:45:24 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application FLOTA with eureka with status DOWN
+2025-11-21 00:45:24 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763685924857, current=DOWN, previous=UP]
+2025-11-21 00:45:24 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 00:45:24 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration status: 204
+2025-11-21 00:46:35 [main] INFO  ar.backend.flota.FlotaApplication - Starting FlotaApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 00:46:35 [main] INFO  ar.backend.flota.FlotaApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 00:46:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 00:46:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 776 ms. Found 2 JPA repository interfaces.
+2025-11-21 00:46:42 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d328444a-701c-36de-81a5-93674dc1bba3
+2025-11-21 00:46:43 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:46:43 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:46:43 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:46:43 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:46:43 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:46:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-11-21 00:46:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 00:46:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-11-21 00:46:44 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 00:46:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9575 ms
+2025-11-21 00:46:45 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 00:46:45 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 00:46:46 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 00:46:47 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 00:46:47 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 00:46:47 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75f65d54
+2025-11-21 00:46:47 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 00:46:47 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-21 00:46:49 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 00:46:50 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 00:46:51 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21 00:46:54 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 00:46:54 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 00:46:54 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 00:46:54 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 00:46:54 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:46:55 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:46:55 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:46:55 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:46:55 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:46:55 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:46:55 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 00:46:55 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:46:56 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:46:56 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 00:46:56 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 00:46:56 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763686016161 with initial instances count: 0
+2025-11-21 00:46:56 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application FLOTA with eureka with status UP
+2025-11-21 00:46:56 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763686016181, current=UP, previous=STARTING]
+2025-11-21 00:46:56 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 00:46:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-11-21 00:46:56 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2025-11-21 00:46:56 [main] INFO  ar.backend.flota.FlotaApplication - Started FlotaApplication in 23.703 seconds (process running for 26.366)
+2025-11-21 00:46:56 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [INICIO] El servicio de Flota se ha iniciado correctamente.
+2025-11-21 00:46:56 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [MONITOREO] Esperando peticiones en el puerto 8082...
+2025-11-21 00:46:56 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration status: 204
+2025-11-21 00:47:26 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:47:26 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:47:26 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:47:26 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:47:26 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:47:26 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-21 00:47:26 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:47:26 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:47:39 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21 00:47:39 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-21 00:47:39 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-11-21 00:47:40 [http-nio-8082-exec-1] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Solicitud de alta para Patente: ABC-123
+2025-11-21 00:47:40 [http-nio-8082-exec-1] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Procesando alta de patente: ABC-123
+2025-11-21 00:47:40 [http-nio-8082-exec-1] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Guardado exitoso en base de datos.
+2025-11-21 00:47:40 [http-nio-8082-exec-1] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Camión creado exitosamente.
+2025-11-21 00:47:40 [http-nio-8082-exec-2] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Solicitud de alta para Patente: ABC-124
+2025-11-21 00:47:40 [http-nio-8082-exec-2] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Procesando alta de patente: ABC-124
+2025-11-21 00:47:40 [http-nio-8082-exec-2] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Guardado exitoso en base de datos.
+2025-11-21 00:47:40 [http-nio-8082-exec-2] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Camión creado exitosamente.
+2025-11-21 00:47:40 [http-nio-8082-exec-3] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Procesando registro. Telefono: 3511234567
+2025-11-21 00:47:40 [http-nio-8082-exec-3] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Usuario nuevo. Guardando en BD...
+2025-11-21 00:47:40 [http-nio-8082-exec-3] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Chofer procesado correctamente. ID: 1
+2025-11-21 00:47:40 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Procesando registro. Telefono: 3511234568
+2025-11-21 00:47:40 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Usuario nuevo. Guardando en BD...
+2025-11-21 00:47:40 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Chofer procesado correctamente. ID: 2
+2025-11-21 00:47:41 [http-nio-8082-exec-5] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Buscando camiones. Requerido -> Volumen: 10.0, Peso: 10.0
+2025-11-21 00:47:41 [http-nio-8082-exec-5] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Buscando camiones con CapacidadVolumen >= 10.0 y CapacidadPeso >= 10.0
+2025-11-21 00:47:41 [http-nio-8082-exec-5] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Se encontraron 2 vehículos aptos.
+2025-11-21 00:47:41 [http-nio-8082-exec-5] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Encontrados: 2 camiones disponibles.
+2025-11-21 00:47:42 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Buscando camiones. Requerido -> Volumen: 10.0, Peso: 10.0
+2025-11-21 00:47:42 [http-nio-8082-exec-6] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Buscando camiones con CapacidadVolumen >= 10.0 y CapacidadPeso >= 10.0
+2025-11-21 00:47:42 [http-nio-8082-exec-6] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Se encontraron 2 vehículos aptos.
+2025-11-21 00:47:42 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Encontrados: 2 camiones disponibles.
+2025-11-21 00:47:43 [http-nio-8082-exec-7] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-123
+2025-11-21 00:47:43 [http-nio-8082-exec-8] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-123 -> Nuevo Estado: NO_DISPONIBLE
+2025-11-21 00:47:43 [http-nio-8082-exec-8] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-123 a estado NO_DISPONIBLE
+2025-11-21 00:47:43 [http-nio-8082-exec-9] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-124
+2025-11-21 00:47:43 [http-nio-8082-exec-10] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-124 -> Nuevo Estado: NO_DISPONIBLE
+2025-11-21 00:47:43 [http-nio-8082-exec-10] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-124 a estado NO_DISPONIBLE
+2025-11-21 00:47:44 [http-nio-8082-exec-2] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] Buscando ChoferID: 1
+2025-11-21 00:47:44 [http-nio-8082-exec-2] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] TramoID 1 agregado a la lista del chofer.
+2025-11-21 00:47:44 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] Buscando ChoferID: 2
+2025-11-21 00:47:44 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] TramoID 2 agregado a la lista del chofer.
+2025-11-21 00:47:44 [http-nio-8082-exec-5] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CONSULTA_TRAMOS] Verificando asignaciones para ChoferID: 1
+2025-11-21 00:47:44 [http-nio-8082-exec-5] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CLIENT_LOGISTICA] Solicitando detalles de 1 tramos al microservicio Logistica...
+2025-11-21 00:47:46 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-123 -> Nuevo Estado: DISPONIBLE
+2025-11-21 00:47:46 [http-nio-8082-exec-6] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-123 a estado DISPONIBLE
+2025-11-21 00:47:46 [http-nio-8082-exec-7] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Removiendo TramoID: 1 de ChoferID: 1
+2025-11-21 00:47:46 [http-nio-8082-exec-7] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Eliminación exitosa.
+2025-11-21 00:47:46 [http-nio-8082-exec-8] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-123
+2025-11-21 00:47:46 [http-nio-8082-exec-9] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-124
+2025-11-21 00:47:46 [http-nio-8082-exec-10] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-124 -> Nuevo Estado: DISPONIBLE
+2025-11-21 00:47:46 [http-nio-8082-exec-10] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-124 a estado DISPONIBLE
+2025-11-21 00:47:46 [http-nio-8082-exec-1] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Removiendo TramoID: 2 de ChoferID: 2
+2025-11-21 00:47:46 [http-nio-8082-exec-1] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Eliminación exitosa.
+2025-11-21 00:48:07 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application FLOTA with eureka with status DOWN
+2025-11-21 00:48:07 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763686087513, current=DOWN, previous=UP]
+2025-11-21 00:48:07 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 00:48:07 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration status: 204
+2025-11-21 01:17:26 [main] INFO  ar.backend.flota.FlotaApplication - Starting FlotaApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 01:17:26 [main] INFO  ar.backend.flota.FlotaApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 01:17:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 01:17:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 656 ms. Found 2 JPA repository interfaces.
+2025-11-21 01:17:35 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d328444a-701c-36de-81a5-93674dc1bba3
+2025-11-21 01:17:36 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 01:17:36 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:17:36 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 01:17:36 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:17:36 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:17:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-11-21 01:17:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 01:17:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-11-21 01:17:37 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 01:17:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 10549 ms
+2025-11-21 01:17:38 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 01:17:38 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 01:17:38 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 01:17:40 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 01:17:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 01:17:41 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6d6712b7
+2025-11-21 01:17:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 01:17:41 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-21 01:17:43 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 01:17:43 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 01:17:44 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21 01:17:47 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 01:17:47 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 01:17:47 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 01:17:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 01:17:47 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 01:17:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 01:17:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 01:17:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 01:17:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 01:17:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 01:17:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 01:17:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 01:17:48 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 01:17:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 01:17:48 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 01:17:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763687868822 with initial instances count: 0
+2025-11-21 01:17:48 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application FLOTA with eureka with status UP
+2025-11-21 01:17:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763687868834, current=UP, previous=STARTING]
+2025-11-21 01:17:48 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 01:17:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-11-21 01:17:48 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2025-11-21 01:17:48 [main] INFO  ar.backend.flota.FlotaApplication - Started FlotaApplication in 26.113 seconds (process running for 29.394)
+2025-11-21 01:17:48 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [INICIO] El servicio de Flota se ha iniciado correctamente.
+2025-11-21 01:17:48 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [MONITOREO] Esperando peticiones en el puerto 8082...
+2025-11-21 01:17:48 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration status: 204
+2025-11-21 01:18:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 01:18:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 01:18:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 01:18:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 01:18:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 01:18:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-21 01:18:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 01:18:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 01:22:47 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 01:26:19 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application FLOTA with eureka with status DOWN
+2025-11-21 01:26:19 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763688379014, current=DOWN, previous=UP]
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/} exception=I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": eureka-server:8761 failed to respond stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": eureka-server:8761 failed to respond
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.core5.http.NoHttpResponseException: eureka-server:8761 failed to respond
+	at org.apache.hc.core5.http.impl.io.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:306)
+	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:175)
+	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:218)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager$InternalConnectionEndpoint.execute(PoolingHttpClientConnectionManager.java:717)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.execute(InternalExecRuntime.java:216)
+	at org.apache.hc.client5.http.impl.classic.MainClientExec.execute(MainClientExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:188)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 21 more
+
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": eureka-server:8761 failed to respond
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/}, exception=I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": Connect to http://eureka-server:8761 [eureka-server/172.18.0.6] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": Connect to http://eureka-server:8761 [eureka-server/172.18.0.6] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://eureka-server:8761 [eureka-server/172.18.0.6] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": Connect to http://eureka-server:8761 [eureka-server/172.18.0.6] failed: Connection refused
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-11-21 01:26:19 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 01:26:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-21 01:26:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-21 01:26:19 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-21 01:37:25 [main] INFO  ar.backend.flota.FlotaApplication - Starting FlotaApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 01:37:25 [main] INFO  ar.backend.flota.FlotaApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 01:37:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 01:37:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1131 ms. Found 2 JPA repository interfaces.
+2025-11-21 01:37:33 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d328444a-701c-36de-81a5-93674dc1bba3
+2025-11-21 01:37:34 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 01:37:34 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:37:34 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 01:37:34 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:37:34 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:37:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-11-21 01:37:35 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 01:37:35 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-11-21 01:37:35 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 01:37:35 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9860 ms
+2025-11-21 01:37:36 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 01:37:36 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 01:37:37 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 01:37:38 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 01:37:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 01:37:38 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6d6712b7
+2025-11-21 01:37:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 01:37:38 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-21 01:37:40 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 01:37:41 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 01:37:42 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21 01:37:45 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 01:37:45 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 01:37:45 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 01:37:45 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 01:37:45 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 01:37:46 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 01:37:46 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 01:37:46 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 01:37:46 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 01:37:46 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 01:37:46 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 01:37:46 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 01:37:47 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 01:37:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 01:37:47 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 01:37:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763689067458 with initial instances count: 0
+2025-11-21 01:37:47 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application FLOTA with eureka with status UP
+2025-11-21 01:37:47 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763689067477, current=UP, previous=STARTING]
+2025-11-21 01:37:47 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 01:37:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2025-11-21 01:37:47 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2025-11-21 01:37:47 [main] INFO  ar.backend.flota.FlotaApplication - Started FlotaApplication in 24.922 seconds (process running for 27.656)
+2025-11-21 01:37:47 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [INICIO] El servicio de Flota se ha iniciado correctamente.
+2025-11-21 01:37:47 [main] INFO  ar.backend.flota.FlotaApplication - [FLOTA] [MONITOREO] Esperando peticiones en el puerto 8082...
+2025-11-21 01:37:47 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration status: 204
+2025-11-21 01:38:17 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 01:38:17 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 01:38:17 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 01:38:17 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 01:38:17 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 01:38:17 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-21 01:38:17 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 01:38:17 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 01:39:21 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21 01:39:21 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-21 01:39:21 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-11-21 01:39:21 [http-nio-8082-exec-1] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Solicitud de alta para Patente: ABC-123
+2025-11-21 01:39:21 [http-nio-8082-exec-1] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Procesando alta de patente: ABC-123
+2025-11-21 01:39:22 [http-nio-8082-exec-1] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Guardado exitoso en base de datos.
+2025-11-21 01:39:22 [http-nio-8082-exec-1] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Camión creado exitosamente.
+2025-11-21 01:39:22 [http-nio-8082-exec-2] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Solicitud de alta para Patente: ABC-124
+2025-11-21 01:39:22 [http-nio-8082-exec-2] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Procesando alta de patente: ABC-124
+2025-11-21 01:39:22 [http-nio-8082-exec-2] INFO  a.b.flota.service.CamionService - [SERVICIO] [CREAR_CAMION] Guardado exitoso en base de datos.
+2025-11-21 01:39:22 [http-nio-8082-exec-2] INFO  a.b.f.controller.CamionController - [FLOTA] [CREAR_CAMION] Camión creado exitosamente.
+2025-11-21 01:39:22 [http-nio-8082-exec-3] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Procesando registro. Telefono: 3511234567
+2025-11-21 01:39:22 [http-nio-8082-exec-3] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Usuario nuevo. Guardando en BD...
+2025-11-21 01:39:22 [http-nio-8082-exec-3] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Chofer procesado correctamente. ID: 1
+2025-11-21 01:39:22 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Procesando registro. Telefono: 3511234568
+2025-11-21 01:39:22 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Usuario nuevo. Guardando en BD...
+2025-11-21 01:39:22 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CREAR_CHOFER] Chofer procesado correctamente. ID: 2
+2025-11-21 01:39:23 [http-nio-8082-exec-5] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Buscando camiones. Requerido -> Volumen: 10.0, Peso: 10.0
+2025-11-21 01:39:23 [http-nio-8082-exec-5] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Buscando camiones con CapacidadVolumen >= 10.0 y CapacidadPeso >= 10.0
+2025-11-21 01:39:23 [http-nio-8082-exec-5] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Se encontraron 2 vehículos aptos.
+2025-11-21 01:39:23 [http-nio-8082-exec-5] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Encontrados: 2 camiones disponibles.
+2025-11-21 01:39:24 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Buscando camiones. Requerido -> Volumen: 10.0, Peso: 10.0
+2025-11-21 01:39:24 [http-nio-8082-exec-6] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Buscando camiones con CapacidadVolumen >= 10.0 y CapacidadPeso >= 10.0
+2025-11-21 01:39:24 [http-nio-8082-exec-6] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMIONES_APTOS] Se encontraron 2 vehículos aptos.
+2025-11-21 01:39:24 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [BUSQUEDA_APTOS] Encontrados: 2 camiones disponibles.
+2025-11-21 01:39:25 [http-nio-8082-exec-7] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-123
+2025-11-21 01:39:25 [http-nio-8082-exec-8] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-123 -> Nuevo Estado: NO_DISPONIBLE
+2025-11-21 01:39:25 [http-nio-8082-exec-8] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-123 a estado NO_DISPONIBLE
+2025-11-21 01:39:26 [http-nio-8082-exec-9] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-124
+2025-11-21 01:39:26 [http-nio-8082-exec-10] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-124 -> Nuevo Estado: NO_DISPONIBLE
+2025-11-21 01:39:26 [http-nio-8082-exec-10] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-124 a estado NO_DISPONIBLE
+2025-11-21 01:39:26 [http-nio-8082-exec-2] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] Buscando ChoferID: 1
+2025-11-21 01:39:26 [http-nio-8082-exec-2] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] TramoID 1 agregado a la lista del chofer.
+2025-11-21 01:39:26 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] Buscando ChoferID: 2
+2025-11-21 01:39:26 [http-nio-8082-exec-4] INFO  a.b.f.service.TransportistaService - [SERVICIO] [ASIGNAR] TramoID 2 agregado a la lista del chofer.
+2025-11-21 01:39:26 [http-nio-8082-exec-5] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CONSULTA_TRAMOS] Verificando asignaciones para ChoferID: 1
+2025-11-21 01:39:26 [http-nio-8082-exec-5] INFO  a.b.f.service.TransportistaService - [SERVICIO] [CLIENT_LOGISTICA] Solicitando detalles de 1 tramos al microservicio Logistica...
+2025-11-21 01:39:28 [http-nio-8082-exec-6] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-123 -> Nuevo Estado: DISPONIBLE
+2025-11-21 01:39:28 [http-nio-8082-exec-6] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-123 a estado DISPONIBLE
+2025-11-21 01:39:28 [http-nio-8082-exec-7] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Removiendo TramoID: 1 de ChoferID: 1
+2025-11-21 01:39:28 [http-nio-8082-exec-7] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Eliminación exitosa.
+2025-11-21 01:39:28 [http-nio-8082-exec-8] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-123
+2025-11-21 01:39:28 [http-nio-8082-exec-9] INFO  a.b.f.controller.CamionController - [FLOTA] [CONSULTA_CAMION] Buscando detalle de Patente: ABC-124
+2025-11-21 01:39:28 [http-nio-8082-exec-10] INFO  a.b.f.controller.CamionController - [FLOTA] [ESTADO_CAMION] Cambiando estado. Patente: ABC-124 -> Nuevo Estado: DISPONIBLE
+2025-11-21 01:39:28 [http-nio-8082-exec-10] INFO  a.b.flota.service.CamionService - [SERVICIO] [CAMBIAR_ESTADO] Actualizando patente ABC-124 a estado DISPONIBLE
+2025-11-21 01:39:29 [http-nio-8082-exec-1] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Removiendo TramoID: 2 de ChoferID: 2
+2025-11-21 01:39:29 [http-nio-8082-exec-1] INFO  a.b.f.service.TransportistaService - [SERVICIO] [DESASIGNAR] Eliminación exitosa.
+2025-11-21 01:40:17 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application FLOTA with eureka with status DOWN
+2025-11-21 01:40:17 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763689217708, current=DOWN, previous=UP]
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082: registering service...
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/} exception=I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": eureka-server:8761 failed to respond stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": eureka-server:8761 failed to respond
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.core5.http.NoHttpResponseException: eureka-server:8761 failed to respond
+	at org.apache.hc.core5.http.impl.io.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:306)
+	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:175)
+	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:218)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager$InternalConnectionEndpoint.execute(PoolingHttpClientConnectionManager.java:717)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.execute(InternalExecRuntime.java:216)
+	at org.apache.hc.client5.http.impl.classic.MainClientExec.execute(MainClientExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:188)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 21 more
+
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": eureka-server:8761 failed to respond
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/}, exception=I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLOTA": Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.netflix.discovery.DiscoveryClient - DiscoveryClient_FLOTA/flota:8082 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

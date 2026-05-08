@@ -1,0 +1,153 @@
+services:
+  # 1. EUREKA SERVER
+  eureka-server:
+    build: ./eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    volumes:
+    - ./logs:/logs  
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 10s
+      retries: 5
+
+  # 2. DB PARA KEYCLOAK (Seguridad)
+  postgres-keycloak:
+    image: postgres:15-alpine
+    container_name: postgres-keycloak
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: password
+    volumes:
+      - keycloak_data:/var/lib/postgresql/data
+
+  # --- NUEVO: DB EXCLUSIVA PARA FLOTA ---
+  postgres-flota:
+    image: postgres:15-alpine
+    container_name: postgres-flota
+    ports:
+      - "5434:5432" # Accedes desde VS Code como localhost:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=db_flota
+    volumes:
+      - vol_db_flota_v2:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d db_flota"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --- NUEVO: DB EXCLUSIVA PARA LOGISTICA ---
+  postgres-logistica:
+    image: postgres:15-alpine
+    container_name: postgres-logistica
+    ports:
+      - "5433:5432" # ¡OJO! Accedes desde VS Code como localhost:5433
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=db_logistica
+    volumes:
+      - vol_db_logistica_v2:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d db_logistica"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 4. KEYCLOAK
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: keycloak
+    ports:
+      - "9090:8080"
+    depends_on:
+      - postgres-keycloak
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - KC_DB=postgres
+      - KC_DB_URL=jdbc:postgresql://postgres-keycloak:5432/keycloak
+      - KC_DB_USERNAME=keycloak
+      - KC_DB_PASSWORD=password
+    command: start-dev
+
+  # 5. API GATEWAY
+  apigateway:
+    build: ./apigateway
+    container_name: apigateway
+    ports:
+      - "8080:8080"
+    volumes:
+    - ./logs:/logs
+    depends_on:
+      keycloak:
+        condition: service_started
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://localhost:9090/realms/tpi-backend
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://keycloak:8080/realms/tpi-backend/protocol/openid-connect/certs
+
+  # 6. MICROSERVICIO FLOTA
+  flota:
+    build: ./flota
+    container_name: flota
+    ports:
+      - "8082:8082"
+    volumes:
+    - ./logs:/logs
+    depends_on:
+      postgres-flota:
+        condition: service_healthy
+      keycloak:
+        condition: service_started
+    environment:
+      - SERVER_PORT=8082
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - EUREKA_INSTANCE_HOSTNAME=flota
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=false
+      # Sobrescribimos la URL completa para asegurar la conexión al container correcto
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-flota:5432/db_flota
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      # Seguridad
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://localhost:9090/realms/tpi-backend
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://keycloak:8080/realms/tpi-backend/protocol/openid-connect/certs
+
+  # 7. MICROSERVICIO LOGISTICA
+  logistica:
+    build: ./logistica
+    container_name: logistica
+    ports:
+      - "8081:8081"
+    volumes:
+    - ./logs:/logs
+    depends_on:
+      postgres-logistica:
+        condition: service_healthy
+      keycloak:
+        condition: service_started
+    environment:
+      - SERVER_PORT=8081
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - EUREKA_INSTANCE_HOSTNAME=logistica
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=false
+      # Sobrescribimos la URL completa para apuntar al container de logistica
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-logistica:5432/db_logistica
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      # Conexión a OSRM
+      - OSRM_URL=http://host.docker.internal:5000
+      # Seguridad
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://localhost:9090/realms/tpi-backend
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://keycloak:8080/realms/tpi-backend/protocol/openid-connect/certs
+
+# VOLÚMENES PERSISTENTES DEFINIDOS
+volumes:
+  keycloak_data:
+  vol_db_flota_v2:
+  vol_db_logistica_v2:

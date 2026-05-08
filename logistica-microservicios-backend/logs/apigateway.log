@@ -1,0 +1,947 @@
+2025-11-21 00:26:16 [main] INFO  a.b.apigateway.ApigatewayApplication - Starting ApigatewayApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 00:26:16 [main] INFO  a.b.apigateway.ApigatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 00:26:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 00:26:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 0 JPA repository interfaces.
+2025-11-21 00:26:21 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c9c3d0e8-ee23-3baa-a45a-baea881f87ea
+2025-11-21 00:26:21 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:26:21 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:26:21 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:26:21 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:26:21 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:26:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 00:26:24 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:69ca9f33-3afd-46dd-ad1f-d958cee72f86 user=SA
+2025-11-21 00:26:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 00:26:24 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 00:26:25 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 00:26:25 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 00:26:26 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 00:26:28 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 00:26:28 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-11-21 00:26:32 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-11-21 00:26:33 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 00:26:33 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 00:26:33 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 00:26:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 00:26:34 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:26:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:26:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:26:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:26:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:26:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:26:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 00:26:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:26:36 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:26:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 00:26:36 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 00:26:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763684796389 with initial instances count: 0
+2025-11-21 00:26:36 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application APIGATEWAY with eureka with status UP
+2025-11-21 00:26:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763684796411, current=UP, previous=STARTING]
+2025-11-21 00:26:36 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 00:26:37 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration status: 204
+2025-11-21 00:26:37 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-11-21 00:26:37 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2025-11-21 00:26:37 [main] INFO  a.b.apigateway.ApigatewayApplication - Started ApigatewayApplication in 22.902 seconds (process running for 24.772)
+2025-11-21 00:26:37 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [INICIO] El servicio ApiGateway se ha iniciado correctamente.
+2025-11-21 00:26:37 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [MONITOREO] Esperando tráfico en puerto 8080...
+2025-11-21 00:27:06 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:27:06 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:27:06 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:27:06 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:27:06 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:27:06 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-21 00:27:06 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:27:06 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:27:06 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application APIGATEWAY with eureka with status DOWN
+2025-11-21 00:27:06 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763684826719, current=DOWN, previous=UP]
+2025-11-21 00:27:06 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 00:27:06 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration status: 204
+2025-11-21 00:27:35 [main] INFO  a.b.apigateway.ApigatewayApplication - Starting ApigatewayApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 00:27:35 [main] INFO  a.b.apigateway.ApigatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 00:27:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 00:27:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 0 JPA repository interfaces.
+2025-11-21 00:27:41 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c9c3d0e8-ee23-3baa-a45a-baea881f87ea
+2025-11-21 00:27:42 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:27:42 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:27:42 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:27:42 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:27:42 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:27:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 00:27:46 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:f18ae656-79b7-4984-9c2b-a043ec094fca user=SA
+2025-11-21 00:27:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 00:27:46 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 00:27:47 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 00:27:47 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 00:27:49 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 00:27:51 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 00:27:51 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-11-21 00:27:55 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-11-21 00:27:57 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 00:27:57 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 00:27:57 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 00:27:57 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 00:27:57 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:27:57 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:27:57 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:27:57 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:27:57 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:27:57 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:27:57 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 00:27:57 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:28:00 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:28:00 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 00:28:00 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 00:28:00 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763684880955 with initial instances count: 0
+2025-11-21 00:28:00 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application APIGATEWAY with eureka with status UP
+2025-11-21 00:28:00 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763684880986, current=UP, previous=STARTING]
+2025-11-21 00:28:00 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 00:28:02 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-11-21 00:28:02 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2025-11-21 00:28:02 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration status: 204
+2025-11-21 00:28:02 [main] INFO  a.b.apigateway.ApigatewayApplication - Started ApigatewayApplication in 28.944 seconds (process running for 31.289)
+2025-11-21 00:28:02 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [INICIO] El servicio ApiGateway se ha iniciado correctamente.
+2025-11-21 00:28:02 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [MONITOREO] Esperando tráfico en puerto 8080...
+2025-11-21 00:28:30 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:28:30 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:28:30 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:28:30 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:28:30 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:28:30 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-21 00:28:30 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:28:30 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:29:25 [parallel-1] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /contenedores | Origen: /172.18.0.1:41578
+2025-11-21 00:29:26 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores | Status: 200 | Tiempo: 694ms
+2025-11-21 00:29:26 [parallel-3] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes | Origen: /172.18.0.1:41578
+2025-11-21 00:29:26 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes | Status: 200 | Tiempo: 540ms
+2025-11-21 00:29:27 [parallel-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /camiones | Origen: /172.18.0.1:41578
+2025-11-21 00:29:27 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones | Status: 200 | Tiempo: 558ms
+2025-11-21 00:29:27 [parallel-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /camiones | Origen: /172.18.0.1:41578
+2025-11-21 00:29:27 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones | Status: 200 | Tiempo: 38ms
+2025-11-21 00:29:27 [parallel-7] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /transportistas | Origen: /172.18.0.1:41578
+2025-11-21 00:29:28 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas | Status: 200 | Tiempo: 326ms
+2025-11-21 00:29:28 [parallel-8] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /transportistas | Origen: /172.18.0.1:41578
+2025-11-21 00:29:28 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas | Status: 200 | Tiempo: 32ms
+2025-11-21 00:29:28 [parallel-9] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /contenedores/1/estado | Origen: /172.18.0.1:41578
+2025-11-21 00:29:28 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores/1/estado | Status: 200 | Tiempo: 69ms
+2025-11-21 00:29:28 [parallel-10] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /camiones/aptos | Origen: /172.18.0.1:41578
+2025-11-21 00:29:28 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones/aptos | Status: 200 | Tiempo: 52ms
+2025-11-21 00:29:28 [parallel-11] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes/rutas-tentativas/1 | Origen: /172.18.0.1:41578
+2025-11-21 00:29:30 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/1 | Status: 200 | Tiempo: 1474ms
+2025-11-21 00:29:30 [parallel-12] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /api/depositos | Origen: /172.18.0.1:41578
+2025-11-21 00:29:30 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /api/depositos | Status: 200 | Tiempo: 32ms
+2025-11-21 00:29:30 [parallel-13] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /solicitudes/rutas-tentativas/1 | Origen: /172.18.0.1:41578
+2025-11-21 00:29:30 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/1 | Status: 200 | Tiempo: 55ms
+2025-11-21 00:29:30 [parallel-14] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes/rutas-tentativas/asignar | Origen: /172.18.0.1:41578
+2025-11-21 00:29:30 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/asignar | Status: 200 | Tiempo: 40ms
+2025-11-21 00:29:30 [parallel-15] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /contenedores/pendientes | Origen: /172.18.0.1:41578
+2025-11-21 00:29:30 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores/pendientes | Status: 200 | Tiempo: 29ms
+2025-11-21 00:29:30 [parallel-16] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/asignar-camion | Origen: /172.18.0.1:41578
+2025-11-21 00:29:31 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/asignar-camion | Status: 200 | Tiempo: 131ms
+2025-11-21 00:29:31 [parallel-1] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/asignar-camion | Origen: /172.18.0.1:41578
+2025-11-21 00:29:31 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/asignar-camion | Status: 200 | Tiempo: 95ms
+2025-11-21 00:29:31 [parallel-2] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/asignar-transportista/1 | Origen: /172.18.0.1:41578
+2025-11-21 00:29:31 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/asignar-transportista/1 | Status: 200 | Tiempo: 142ms
+2025-11-21 00:29:31 [parallel-3] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/asignar-transportista/2 | Origen: /172.18.0.1:41578
+2025-11-21 00:29:31 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/asignar-transportista/2 | Status: 200 | Tiempo: 68ms
+2025-11-21 00:29:31 [parallel-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /transportistas/1/tramos-asignados | Origen: /172.18.0.1:41578
+2025-11-21 00:29:33 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas/1/tramos-asignados | Status: 200 | Tiempo: 1559ms
+2025-11-21 00:29:33 [parallel-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/iniciar | Origen: /172.18.0.1:41578
+2025-11-21 00:29:33 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/iniciar | Status: 200 | Tiempo: 82ms
+2025-11-21 00:29:33 [parallel-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/finalizar | Origen: /172.18.0.1:41578
+2025-11-21 00:29:33 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/finalizar | Status: 200 | Tiempo: 146ms
+2025-11-21 00:29:33 [parallel-7] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /api/depositos/1/contenedores | Origen: /172.18.0.1:41578
+2025-11-21 00:29:34 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /api/depositos/1/contenedores | Status: 200 | Tiempo: 37ms
+2025-11-21 00:29:34 [parallel-8] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/iniciar | Origen: /172.18.0.1:41578
+2025-11-21 00:29:34 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/iniciar | Status: 200 | Tiempo: 46ms
+2025-11-21 00:29:34 [parallel-9] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/finalizar | Origen: /172.18.0.1:41578
+2025-11-21 00:29:34 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/finalizar | Status: 200 | Tiempo: 156ms
+2025-11-21 00:32:57 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:36:55 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application APIGATEWAY with eureka with status DOWN
+2025-11-21 00:36:55 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763685415219, current=DOWN, previous=UP]
+2025-11-21 00:36:55 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 00:36:55 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration status: 204
+2025-11-21 00:37:25 [main] INFO  a.b.apigateway.ApigatewayApplication - Starting ApigatewayApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 00:37:25 [main] INFO  a.b.apigateway.ApigatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 00:37:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 00:37:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 0 JPA repository interfaces.
+2025-11-21 00:37:29 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c9c3d0e8-ee23-3baa-a45a-baea881f87ea
+2025-11-21 00:37:30 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:37:30 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:37:30 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:37:30 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:37:30 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:37:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 00:37:34 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:9098ba31-fd1b-48fa-aa6e-95958ff4dece user=SA
+2025-11-21 00:37:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 00:37:34 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 00:37:35 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 00:37:35 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 00:37:37 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 00:37:39 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 00:37:40 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-11-21 00:37:43 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-11-21 00:37:45 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 00:37:45 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 00:37:45 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 00:37:45 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 00:37:45 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:37:45 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:37:45 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:37:45 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:37:45 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:37:45 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:37:45 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 00:37:45 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:37:48 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:37:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 00:37:48 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 00:37:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763685468285 with initial instances count: 0
+2025-11-21 00:37:48 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application APIGATEWAY with eureka with status UP
+2025-11-21 00:37:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763685468313, current=UP, previous=STARTING]
+2025-11-21 00:37:48 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 00:37:49 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration status: 204
+2025-11-21 00:37:49 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-11-21 00:37:49 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2025-11-21 00:37:49 [main] INFO  a.b.apigateway.ApigatewayApplication - Started ApigatewayApplication in 26.158 seconds (process running for 28.085)
+2025-11-21 00:37:49 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [INICIO] El servicio ApiGateway se ha iniciado correctamente.
+2025-11-21 00:37:49 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [MONITOREO] Esperando tráfico en puerto 8080...
+2025-11-21 00:38:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:38:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:38:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:38:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:38:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:38:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-21 00:38:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:38:18 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:42:45 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:43:54 [parallel-1] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /contenedores | Origen: /172.18.0.1:39942
+2025-11-21 00:43:54 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores | Status: 200 | Tiempo: 794ms
+2025-11-21 00:44:29 [parallel-3] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /contenedores | Origen: /172.18.0.1:39942
+2025-11-21 00:44:29 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores | Status: 200 | Tiempo: 53ms
+2025-11-21 00:44:29 [parallel-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes | Origen: /172.18.0.1:39942
+2025-11-21 00:44:30 [reactor-http-epoll-4] WARN  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-ERROR] <- Path: /solicitudes | Status: 500 | Tiempo: 455ms
+2025-11-21 00:44:30 [parallel-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /camiones | Origen: /172.18.0.1:39942
+2025-11-21 00:44:30 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones | Status: 200 | Tiempo: 773ms
+2025-11-21 00:44:31 [parallel-8] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /camiones | Origen: /172.18.0.1:39942
+2025-11-21 00:44:31 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones | Status: 200 | Tiempo: 39ms
+2025-11-21 00:44:31 [parallel-9] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /transportistas | Origen: /172.18.0.1:39942
+2025-11-21 00:44:31 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas | Status: 200 | Tiempo: 266ms
+2025-11-21 00:44:31 [parallel-10] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /transportistas | Origen: /172.18.0.1:39942
+2025-11-21 00:44:31 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas | Status: 200 | Tiempo: 24ms
+2025-11-21 00:44:31 [parallel-11] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /contenedores/1/estado | Origen: /172.18.0.1:39942
+2025-11-21 00:44:31 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores/1/estado | Status: 200 | Tiempo: 54ms
+2025-11-21 00:44:31 [parallel-12] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /camiones/aptos | Origen: /172.18.0.1:39942
+2025-11-21 00:44:31 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones/aptos | Status: 200 | Tiempo: 49ms
+2025-11-21 00:44:32 [parallel-13] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes/rutas-tentativas/1 | Origen: /172.18.0.1:39942
+2025-11-21 00:44:33 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/1 | Status: 200 | Tiempo: 1368ms
+2025-11-21 00:44:33 [parallel-14] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /api/depositos | Origen: /172.18.0.1:39942
+2025-11-21 00:44:33 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /api/depositos | Status: 200 | Tiempo: 42ms
+2025-11-21 00:44:33 [parallel-15] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /solicitudes/rutas-tentativas/1 | Origen: /172.18.0.1:39942
+2025-11-21 00:44:33 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/1 | Status: 200 | Tiempo: 58ms
+2025-11-21 00:44:33 [parallel-16] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes/rutas-tentativas/asignar | Origen: /172.18.0.1:39942
+2025-11-21 00:44:33 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/asignar | Status: 200 | Tiempo: 42ms
+2025-11-21 00:44:34 [parallel-1] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /contenedores/pendientes | Origen: /172.18.0.1:39942
+2025-11-21 00:44:34 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores/pendientes | Status: 200 | Tiempo: 35ms
+2025-11-21 00:44:34 [parallel-2] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/asignar-camion | Origen: /172.18.0.1:39942
+2025-11-21 00:44:34 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/asignar-camion | Status: 200 | Tiempo: 181ms
+2025-11-21 00:44:34 [parallel-3] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/asignar-camion | Origen: /172.18.0.1:39942
+2025-11-21 00:44:34 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/asignar-camion | Status: 200 | Tiempo: 110ms
+2025-11-21 00:44:34 [parallel-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/asignar-transportista/1 | Origen: /172.18.0.1:39942
+2025-11-21 00:44:35 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/asignar-transportista/1 | Status: 200 | Tiempo: 147ms
+2025-11-21 00:44:35 [parallel-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/asignar-transportista/2 | Origen: /172.18.0.1:39942
+2025-11-21 00:44:35 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/asignar-transportista/2 | Status: 200 | Tiempo: 70ms
+2025-11-21 00:44:35 [parallel-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /transportistas/1/tramos-asignados | Origen: /172.18.0.1:39942
+2025-11-21 00:44:36 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas/1/tramos-asignados | Status: 200 | Tiempo: 1589ms
+2025-11-21 00:44:36 [parallel-7] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/iniciar | Origen: /172.18.0.1:39942
+2025-11-21 00:44:37 [reactor-http-epoll-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/iniciar | Status: 200 | Tiempo: 69ms
+2025-11-21 00:44:37 [parallel-8] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/finalizar | Origen: /172.18.0.1:39942
+2025-11-21 00:44:37 [reactor-http-epoll-6] WARN  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-ERROR] <- Path: /tramos/1/finalizar | Status: 500 | Tiempo: 63ms
+2025-11-21 00:44:37 [parallel-9] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /api/depositos/1/contenedores | Origen: /172.18.0.1:39942
+2025-11-21 00:44:37 [reactor-http-epoll-7] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /api/depositos/1/contenedores | Status: 200 | Tiempo: 72ms
+2025-11-21 00:44:37 [parallel-10] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/iniciar | Origen: /172.18.0.1:39942
+2025-11-21 00:44:37 [reactor-http-epoll-7] WARN  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-ERROR] <- Path: /tramos/2/iniciar | Status: 500 | Tiempo: 41ms
+2025-11-21 00:44:37 [parallel-11] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/finalizar | Origen: /172.18.0.1:39942
+2025-11-21 00:44:37 [reactor-http-epoll-8] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/finalizar | Status: 200 | Tiempo: 175ms
+2025-11-21 00:45:24 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application APIGATEWAY with eureka with status DOWN
+2025-11-21 00:45:24 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763685924892, current=DOWN, previous=UP]
+2025-11-21 00:45:24 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 00:45:24 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration status: 204
+2025-11-21 00:45:48 [main] INFO  a.b.apigateway.ApigatewayApplication - Starting ApigatewayApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 00:45:48 [main] INFO  a.b.apigateway.ApigatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 00:45:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 00:45:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 0 JPA repository interfaces.
+2025-11-21 00:45:53 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c9c3d0e8-ee23-3baa-a45a-baea881f87ea
+2025-11-21 00:45:53 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:45:53 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:45:53 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:45:53 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:45:54 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:45:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 00:45:57 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:e3d61c44-4a56-4258-9202-dc4123608b0a user=SA
+2025-11-21 00:45:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 00:45:57 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 00:45:58 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 00:45:58 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 00:45:59 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 00:46:23 [main] INFO  a.b.apigateway.ApigatewayApplication - Starting ApigatewayApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 00:46:23 [main] INFO  a.b.apigateway.ApigatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 00:46:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 00:46:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 JPA repository interfaces.
+2025-11-21 00:46:26 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c9c3d0e8-ee23-3baa-a45a-baea881f87ea
+2025-11-21 00:46:27 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:46:27 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:46:27 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 00:46:27 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:46:27 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 00:46:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 00:46:30 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:519777c9-c401-4cbc-bf02-d9e2db6ecddc user=SA
+2025-11-21 00:46:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 00:46:31 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 00:46:31 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 00:46:31 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 00:46:32 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 00:46:34 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 00:46:34 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-11-21 00:46:38 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-11-21 00:46:40 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 00:46:40 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 00:46:40 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 00:46:40 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 00:46:40 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 00:46:40 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:46:40 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:46:40 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:46:40 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:46:40 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:46:40 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 00:46:40 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:46:42 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:46:42 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 00:46:42 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 00:46:42 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763686002546 with initial instances count: 0
+2025-11-21 00:46:42 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application APIGATEWAY with eureka with status UP
+2025-11-21 00:46:42 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763686002568, current=UP, previous=STARTING]
+2025-11-21 00:46:42 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 00:46:43 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-11-21 00:46:43 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2025-11-21 00:46:43 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration status: 204
+2025-11-21 00:46:43 [main] INFO  a.b.apigateway.ApigatewayApplication - Started ApigatewayApplication in 21.875 seconds (process running for 23.621)
+2025-11-21 00:46:43 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [INICIO] El servicio ApiGateway se ha iniciado correctamente.
+2025-11-21 00:46:43 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [MONITOREO] Esperando tráfico en puerto 8080...
+2025-11-21 00:47:12 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 00:47:12 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 00:47:12 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 00:47:12 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 00:47:12 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 00:47:12 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-21 00:47:12 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 00:47:12 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 00:47:38 [parallel-1] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /contenedores | Origen: /172.18.0.1:38232
+2025-11-21 00:47:38 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores | Status: 200 | Tiempo: 682ms
+2025-11-21 00:47:38 [parallel-3] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes | Origen: /172.18.0.1:38232
+2025-11-21 00:47:39 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes | Status: 200 | Tiempo: 486ms
+2025-11-21 00:47:39 [parallel-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /camiones | Origen: /172.18.0.1:38232
+2025-11-21 00:47:40 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones | Status: 200 | Tiempo: 660ms
+2025-11-21 00:47:40 [parallel-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /camiones | Origen: /172.18.0.1:38232
+2025-11-21 00:47:40 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones | Status: 200 | Tiempo: 38ms
+2025-11-21 00:47:40 [parallel-7] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /transportistas | Origen: /172.18.0.1:38232
+2025-11-21 00:47:40 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas | Status: 200 | Tiempo: 255ms
+2025-11-21 00:47:40 [parallel-8] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /transportistas | Origen: /172.18.0.1:38232
+2025-11-21 00:47:40 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas | Status: 200 | Tiempo: 30ms
+2025-11-21 00:47:41 [parallel-9] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /contenedores/1/estado | Origen: /172.18.0.1:38232
+2025-11-21 00:47:41 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores/1/estado | Status: 200 | Tiempo: 63ms
+2025-11-21 00:47:41 [parallel-10] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /camiones/aptos | Origen: /172.18.0.1:38232
+2025-11-21 00:47:41 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones/aptos | Status: 200 | Tiempo: 45ms
+2025-11-21 00:47:41 [parallel-11] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes/rutas-tentativas/1 | Origen: /172.18.0.1:38232
+2025-11-21 00:47:42 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/1 | Status: 200 | Tiempo: 1336ms
+2025-11-21 00:47:42 [parallel-12] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /api/depositos | Origen: /172.18.0.1:38232
+2025-11-21 00:47:42 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /api/depositos | Status: 200 | Tiempo: 34ms
+2025-11-21 00:47:42 [parallel-13] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /solicitudes/rutas-tentativas/1 | Origen: /172.18.0.1:38232
+2025-11-21 00:47:43 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/1 | Status: 200 | Tiempo: 63ms
+2025-11-21 00:47:43 [parallel-14] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes/rutas-tentativas/asignar | Origen: /172.18.0.1:38232
+2025-11-21 00:47:43 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/asignar | Status: 200 | Tiempo: 47ms
+2025-11-21 00:47:43 [parallel-15] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /contenedores/pendientes | Origen: /172.18.0.1:38232
+2025-11-21 00:47:43 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores/pendientes | Status: 200 | Tiempo: 46ms
+2025-11-21 00:47:43 [parallel-16] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/asignar-camion | Origen: /172.18.0.1:38232
+2025-11-21 00:47:43 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/asignar-camion | Status: 200 | Tiempo: 146ms
+2025-11-21 00:47:43 [parallel-1] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/asignar-camion | Origen: /172.18.0.1:38232
+2025-11-21 00:47:43 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/asignar-camion | Status: 200 | Tiempo: 177ms
+2025-11-21 00:47:44 [parallel-2] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/asignar-transportista/1 | Origen: /172.18.0.1:38232
+2025-11-21 00:47:44 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/asignar-transportista/1 | Status: 200 | Tiempo: 134ms
+2025-11-21 00:47:44 [parallel-3] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/asignar-transportista/2 | Origen: /172.18.0.1:38232
+2025-11-21 00:47:44 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/asignar-transportista/2 | Status: 200 | Tiempo: 72ms
+2025-11-21 00:47:44 [parallel-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /transportistas/1/tramos-asignados | Origen: /172.18.0.1:38232
+2025-11-21 00:47:45 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas/1/tramos-asignados | Status: 200 | Tiempo: 1445ms
+2025-11-21 00:47:45 [parallel-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/iniciar | Origen: /172.18.0.1:38232
+2025-11-21 00:47:46 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/iniciar | Status: 200 | Tiempo: 71ms
+2025-11-21 00:47:46 [parallel-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/finalizar | Origen: /172.18.0.1:38232
+2025-11-21 00:47:46 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/finalizar | Status: 200 | Tiempo: 138ms
+2025-11-21 00:47:46 [parallel-7] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /api/depositos/1/contenedores | Origen: /172.18.0.1:38232
+2025-11-21 00:47:46 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /api/depositos/1/contenedores | Status: 200 | Tiempo: 31ms
+2025-11-21 00:47:46 [parallel-8] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/iniciar | Origen: /172.18.0.1:38232
+2025-11-21 00:47:46 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/iniciar | Status: 200 | Tiempo: 59ms
+2025-11-21 00:47:46 [parallel-9] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/finalizar | Origen: /172.18.0.1:38232
+2025-11-21 00:47:46 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/finalizar | Status: 200 | Tiempo: 191ms
+2025-11-21 00:48:07 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application APIGATEWAY with eureka with status DOWN
+2025-11-21 00:48:07 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763686087483, current=DOWN, previous=UP]
+2025-11-21 00:48:07 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 00:48:07 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration status: 204
+2025-11-21 01:17:14 [main] INFO  a.b.apigateway.ApigatewayApplication - Starting ApigatewayApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 01:17:14 [main] INFO  a.b.apigateway.ApigatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 01:17:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 01:17:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 0 JPA repository interfaces.
+2025-11-21 01:17:20 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c9c3d0e8-ee23-3baa-a45a-baea881f87ea
+2025-11-21 01:17:21 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 01:17:21 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:17:21 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 01:17:21 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:17:21 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:17:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 01:17:26 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:e5f72080-d517-4cd0-9703-82b6f62f4c32 user=SA
+2025-11-21 01:17:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 01:17:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 01:17:27 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 01:17:27 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 01:17:29 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 01:17:31 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 01:17:31 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-11-21 01:17:35 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-11-21 01:17:36 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 01:17:36 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 01:17:36 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 01:17:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 01:17:36 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 01:17:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 01:17:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 01:17:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 01:17:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 01:17:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 01:17:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 01:17:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 01:17:38 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 01:17:38 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 01:17:38 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 01:17:38 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763687858612 with initial instances count: 0
+2025-11-21 01:17:38 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application APIGATEWAY with eureka with status UP
+2025-11-21 01:17:38 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763687858633, current=UP, previous=STARTING]
+2025-11-21 01:17:38 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 01:17:39 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration status: 204
+2025-11-21 01:17:39 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-11-21 01:17:39 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2025-11-21 01:17:39 [main] INFO  a.b.apigateway.ApigatewayApplication - Started ApigatewayApplication in 27.044 seconds (process running for 29.51)
+2025-11-21 01:17:39 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [INICIO] El servicio ApiGateway se ha iniciado correctamente.
+2025-11-21 01:17:39 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [MONITOREO] Esperando tráfico en puerto 8080...
+2025-11-21 01:18:08 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 01:18:08 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 01:18:08 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 01:18:08 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 01:18:08 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 01:18:08 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-21 01:18:08 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 01:18:08 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 01:22:36 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 01:26:19 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application APIGATEWAY with eureka with status DOWN
+2025-11-21 01:26:19 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763688379006, current=DOWN, previous=UP]
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/} exception=I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": eureka-server:8761 failed to respond stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": eureka-server:8761 failed to respond
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.core5.http.NoHttpResponseException: eureka-server:8761 failed to respond
+	at org.apache.hc.core5.http.impl.io.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:306)
+	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:175)
+	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:218)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager$InternalConnectionEndpoint.execute(PoolingHttpClientConnectionManager.java:717)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.execute(InternalExecRuntime.java:216)
+	at org.apache.hc.client5.http.impl.classic.MainClientExec.execute(MainClientExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:188)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 21 more
+
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": eureka-server:8761 failed to respond
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/}, exception=I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": Connect to http://eureka-server:8761 [eureka-server/172.18.0.6] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": Connect to http://eureka-server:8761 [eureka-server/172.18.0.6] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://eureka-server:8761 [eureka-server/172.18.0.6] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": Connect to http://eureka-server:8761 [eureka-server/172.18.0.6] failed: Connection refused
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-11-21 01:26:19 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-11-21 01:37:13 [main] INFO  a.b.apigateway.ApigatewayApplication - Starting ApigatewayApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app.jar started by root in /)
+2025-11-21 01:37:13 [main] INFO  a.b.apigateway.ApigatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 01:37:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21 01:37:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 0 JPA repository interfaces.
+2025-11-21 01:37:16 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c9c3d0e8-ee23-3baa-a45a-baea881f87ea
+2025-11-21 01:37:17 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 01:37:17 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:37:17 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-21 01:37:17 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:37:17 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-11-21 01:37:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 01:37:19 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:3ca51725-9465-4d6e-9e24-a955156f1e3e user=SA
+2025-11-21 01:37:19 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 01:37:20 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21 01:37:20 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-21 01:37:20 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-21 01:37:21 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21 01:37:23 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21 01:37:23 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-11-21 01:37:27 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-11-21 01:37:28 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-21 01:37:29 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-21 01:37:29 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-21 01:37:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-21 01:37:29 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-21 01:37:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 01:37:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 01:37:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 01:37:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 01:37:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 01:37:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-21 01:37:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 01:37:31 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 01:37:31 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-21 01:37:31 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-21 01:37:31 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763689051629 with initial instances count: 0
+2025-11-21 01:37:31 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application APIGATEWAY with eureka with status UP
+2025-11-21 01:37:31 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763689051731, current=UP, previous=STARTING]
+2025-11-21 01:37:31 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 01:37:32 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration status: 204
+2025-11-21 01:37:32 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-11-21 01:37:32 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+2025-11-21 01:37:33 [main] INFO  a.b.apigateway.ApigatewayApplication - Started ApigatewayApplication in 21.527 seconds (process running for 23.503)
+2025-11-21 01:37:33 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [INICIO] El servicio ApiGateway se ha iniciado correctamente.
+2025-11-21 01:37:33 [main] INFO  a.b.apigateway.ApigatewayApplication - [GATEWAY] [MONITOREO] Esperando tráfico en puerto 8080...
+2025-11-21 01:38:01 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-21 01:38:01 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-21 01:38:01 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-21 01:38:01 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-21 01:38:01 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-21 01:38:01 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-21 01:38:01 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-21 01:38:01 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-21 01:39:20 [parallel-1] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /contenedores | Origen: /172.18.0.1:48818
+2025-11-21 01:39:20 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores | Status: 200 | Tiempo: 627ms
+2025-11-21 01:39:21 [parallel-3] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes | Origen: /172.18.0.1:48818
+2025-11-21 01:39:21 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes | Status: 200 | Tiempo: 398ms
+2025-11-21 01:39:21 [parallel-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /camiones | Origen: /172.18.0.1:48818
+2025-11-21 01:39:22 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones | Status: 200 | Tiempo: 655ms
+2025-11-21 01:39:22 [parallel-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /camiones | Origen: /172.18.0.1:48818
+2025-11-21 01:39:22 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones | Status: 200 | Tiempo: 51ms
+2025-11-21 01:39:22 [parallel-7] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /transportistas | Origen: /172.18.0.1:48818
+2025-11-21 01:39:22 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas | Status: 200 | Tiempo: 204ms
+2025-11-21 01:39:22 [parallel-8] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /transportistas | Origen: /172.18.0.1:48818
+2025-11-21 01:39:22 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas | Status: 200 | Tiempo: 49ms
+2025-11-21 01:39:23 [parallel-9] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /contenedores/1/estado | Origen: /172.18.0.1:48818
+2025-11-21 01:39:23 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores/1/estado | Status: 200 | Tiempo: 85ms
+2025-11-21 01:39:23 [parallel-10] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /camiones/aptos | Origen: /172.18.0.1:48818
+2025-11-21 01:39:23 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /camiones/aptos | Status: 200 | Tiempo: 42ms
+2025-11-21 01:39:23 [parallel-11] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes/rutas-tentativas/1 | Origen: /172.18.0.1:48818
+2025-11-21 01:39:24 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/1 | Status: 200 | Tiempo: 1601ms
+2025-11-21 01:39:25 [parallel-12] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /api/depositos | Origen: /172.18.0.1:48818
+2025-11-21 01:39:25 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /api/depositos | Status: 200 | Tiempo: 37ms
+2025-11-21 01:39:25 [parallel-13] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /solicitudes/rutas-tentativas/1 | Origen: /172.18.0.1:48818
+2025-11-21 01:39:25 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/1 | Status: 200 | Tiempo: 50ms
+2025-11-21 01:39:25 [parallel-14] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /solicitudes/rutas-tentativas/asignar | Origen: /172.18.0.1:48818
+2025-11-21 01:39:25 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /solicitudes/rutas-tentativas/asignar | Status: 200 | Tiempo: 51ms
+2025-11-21 01:39:25 [parallel-15] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /contenedores/pendientes | Origen: /172.18.0.1:48818
+2025-11-21 01:39:25 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /contenedores/pendientes | Status: 200 | Tiempo: 33ms
+2025-11-21 01:39:25 [parallel-16] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/asignar-camion | Origen: /172.18.0.1:48818
+2025-11-21 01:39:25 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/asignar-camion | Status: 200 | Tiempo: 164ms
+2025-11-21 01:39:26 [parallel-1] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/asignar-camion | Origen: /172.18.0.1:48818
+2025-11-21 01:39:26 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/asignar-camion | Status: 200 | Tiempo: 143ms
+2025-11-21 01:39:26 [parallel-2] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/asignar-transportista/1 | Origen: /172.18.0.1:48818
+2025-11-21 01:39:26 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/asignar-transportista/1 | Status: 200 | Tiempo: 173ms
+2025-11-21 01:39:26 [parallel-3] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/asignar-transportista/2 | Origen: /172.18.0.1:48818
+2025-11-21 01:39:26 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/asignar-transportista/2 | Status: 200 | Tiempo: 73ms
+2025-11-21 01:39:26 [parallel-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /transportistas/1/tramos-asignados | Origen: /172.18.0.1:48818
+2025-11-21 01:39:28 [reactor-http-epoll-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /transportistas/1/tramos-asignados | Status: 200 | Tiempo: 1249ms
+2025-11-21 01:39:28 [parallel-5] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/iniciar | Origen: /172.18.0.1:48818
+2025-11-21 01:39:28 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/iniciar | Status: 200 | Tiempo: 44ms
+2025-11-21 01:39:28 [parallel-6] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/1/finalizar | Origen: /172.18.0.1:48818
+2025-11-21 01:39:28 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/1/finalizar | Status: 200 | Tiempo: 150ms
+2025-11-21 01:39:28 [parallel-7] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: GET | Path: /api/depositos/1/contenedores | Origen: /172.18.0.1:48818
+2025-11-21 01:39:28 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /api/depositos/1/contenedores | Status: 200 | Tiempo: 34ms
+2025-11-21 01:39:28 [parallel-8] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/iniciar | Origen: /172.18.0.1:48818
+2025-11-21 01:39:28 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/iniciar | Status: 200 | Tiempo: 68ms
+2025-11-21 01:39:28 [parallel-9] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [ENTRADA] -> Metodo: POST | Path: /tramos/2/finalizar | Origen: /172.18.0.1:48818
+2025-11-21 01:39:29 [reactor-http-epoll-4] INFO  a.b.apigateway.config.LoggingFilter - [GATEWAY] [SALIDA-OK] <- Path: /tramos/2/finalizar | Status: 200 | Tiempo: 142ms
+2025-11-21 01:40:17 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application APIGATEWAY with eureka with status DOWN
+2025-11-21 01:40:17 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763689217717, current=DOWN, previous=UP]
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080: registering service...
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/} exception=I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 21 more
+
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/}, exception=I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://eureka-server:8761/eureka/apps/APIGATEWAY": Connect to http://eureka-server:8761 [eureka-server/172.18.0.5] failed: Connection refused
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.netflix.discovery.DiscoveryClient - DiscoveryClient_APIGATEWAY/apigateway:8080 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-11-21 01:40:17 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
